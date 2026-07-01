@@ -1,0 +1,22 @@
+<div class="site-container">
+  <div class="flex justify-between items-start gap-4 flex-wrap">
+    <figure class="max-w-2xl">
+      <img src="assets/img/hero-2.png" class="block" />
+    </figure>
+    <article class="space-y-6 max-w-2xl"></article>
+  </div>
+</div>
+
+
+
+
+<a
+    class="cta lg bg-pink-200 border-pink-200 text-white hover:bg-purple-100 hover:border-purple-100 hover:text-white"
+    href="#"
+    >Join the Society</a
+>
+<a
+    class="cta lg bg-purple-100 border-purple-100 text-white hover:bg-pink-100 hover:border-pink-100"
+    href="#"
+    >Upcoming Webinars</a
+>
