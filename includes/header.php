@@ -3,14 +3,14 @@
 <header class="py-4 sticky top-0 bg-white z-1">
     <div class="site-container">
         <div class="flex justify-between items-center gap-4">
-            <a href="#" aria-label="Kolkata Menopause Society home">
+            <a href="index.php" aria-label="Kolkata Menopause Society home">
                 <img src="assets/img/KMS-logo.png" class="block" alt="Kolkata Menopause Society"
                     title="Kolkata Menopause Society" />
             </a>
 
             <nav class="flex gap-4">
-                <a href="#home">Home</a>
-                <a href="#about">About Us</a>
+                <a href="index.php">Home</a>
+                <a href="about.php">About Us</a>
                 <a href="#events">Events & Webinars</a>
                 <a href="#publications">Publications</a>
                 <a href="#members">Members</a>

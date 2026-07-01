@@ -1,7 +1,7 @@
 <footer class="text-white">
     <div class="bg-purple-900 py-20">
         <div class="site-container">
-            <div class="flex items-start justify-between gap-4">
+            <div class="flex items-start justify-between gap-4 flex-wrap">
                 <div class="space-y-6 max-w-lg">
                     <figure class="bg-white rounded-md px-4 py-4 w-fit">
                         <img src="assets/img/KMS-logo.png" class="block" alt="Kolkata Menopause Society"
@@ -52,7 +52,7 @@
 
     <div class="bg-purple-950 py-4">
         <div class="site-container">
-            <div class="flex items-center justify-between gap-4">
+            <div class="flex items-center justify-between gap-4 flex-wrap">
                 <p>© 2026 Kolkata Menopause Society. All rights reserved.</p>
                 <ul class="flex gap-2">
                     <li><a>Privacy Policy</a></li>

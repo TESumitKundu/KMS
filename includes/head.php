@@ -40,6 +40,7 @@
 
         /* Pink / Magenta */
         --color-pink-50: #f7d8ee;
+        --color-pink-75: #fff8ff;
         --color-pink-100: #ac2b76;
         --color-pink-200: #ab2874;
         --color-magenta-100: #b72d88;
@@ -56,7 +57,7 @@
           scroll-behavior: smooth;
         }
         body {
-          @apply m-0 bg-white-100 text-gray-100 text-sm leading-[1.65] text-pretty;
+          @apply m-0 overflow-x-hidden bg-white-100 text-gray-100 text-sm leading-[1.65] text-pretty;
         }
         a {
           @apply text-inherit no-underline;
@@ -74,13 +75,29 @@
 
       @layer components {
         .site-container {
-          @apply mx-auto w-[min(1400px,calc(100%_-_2rem))];
+          @apply mx-auto w-[min(1400px,calc(100%_-_2rem))] space-y-16;
         }
 
         .standard-typography {
           @apply space-y-6;
         }
 
+        .standard-typography h1 b,
+        .standard-typography h2 b,
+        .standard-typography h3 b,
+        .standard-typography h4 b,
+        .standard-typography h5 b,
+        .standard-typography h6 b {
+          @apply text-pink-100 font-semibold;
+        }
+
+        .standard-typography h1 {
+          @apply text-6xl font-semibold;
+        }
+        
+        .standard-typography h2 {
+          @apply text-5xl font-semibold text-gray-200;
+        }
 
         .standard-typography h3 {
           @apply text-3xl font-semibold text-gray-200;
@@ -128,9 +145,14 @@
         .bg-gradient-3 {
           background: linear-gradient(104.04deg, #eed5ff 0%, #fbeafa 100%);
         }
+        
+        .bg-gradient-4 {
+          background: linear-gradient(180deg, #FBEAFA 56.98%, #E9CAFF 100%);
+        }
+
 
         .site__home-hero article h1 {
-          @apply text-purple-100 text-[clamp(2rem,3.43vw,3rem)] font-light leading-[1.25];
+          @apply text-purple-100 text-[clamp(2rem,3.43vw,3rem)] font-light leading-[1.15];
         }
 
         .site__home-hero article h1 strong,
@@ -238,6 +260,71 @@
           @apply absolute top-[29px] right-[-5px] z-[2] hidden size-3 rounded-full bg-pink-100 lg:block;
         }
 
+        .about-page {
+          @apply overflow-hidden;
+        }
+
+        .about-hero {
+          @apply relative isolate overflow-hidden bg-purple-75 py-16 text-center;
+        }
+
+        .about-hero::before,
+        .about-hero::after,
+        .about-cta::before,
+        .about-cta::after {
+          content: "";
+          @apply absolute rounded-full border-[34px] border-white/20;
+        }
+
+        .about-hero::before {
+          @apply left-8 top-12 size-6;
+        }
+
+        .about-hero::after {
+          @apply right-16 bottom-10 size-12;
+        }
+
+        .about-hero h1 {
+          @apply text-[clamp(2rem,4vw,3.75rem)] font-semibold leading-tight text-purple-100;
+        }
+
+        .about-hero h1 strong,
+        .about-intro h2 strong {
+          @apply font-semibold text-pink-100;
+        }
+
+        .site__about-intro .stat-card {
+          @apply absolute right-4 bg-pink-75 py-4;
+        }
+
+        .site__about-intro .stat-card:first-of-type {
+          @apply top-8;
+        }
+
+        .site__about-intro .stat-card:last-of-type {
+          @apply bottom-8;
+        }
+
+        .about-grid{
+          @apply grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-gray-80 -mx-8;
+        }
+
+        .about-feature-grid{
+          @apply grid gap-px md:grid-cols-2 lg:grid-cols-3;
+        }
+
+        .about-feature-card {
+          @apply bg-white p-8 space-y-4;
+        }
+
+        .about-feature-card h5{
+          @apply text-2xl font-semibold text-gray-200;
+        }
+
+        .about-feature-card figure{
+          @apply size-20
+        }
+
         .speaker-photo {
           @apply mx-auto size-[154px] bg-white rounded-full;
         }
@@ -246,8 +333,8 @@
           @apply bg-purple-100 text-white px-6 py-4 rounded-md flex gap-4 items-center justify-between;
         }
 
-        .winner-card > div{
-            @apply flex-1;
+        .winner-card > div {
+          @apply flex-1;
         }
 
         .winner-card h6 {
@@ -268,4 +355,4 @@
       }
     </style>
   </head>
-  
+</html>
