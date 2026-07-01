@@ -8,13 +8,13 @@
                     title="Kolkata Menopause Society" />
             </a>
 
-            <nav class="flex gap-4">
+            <nav class="hidden md:flex gap-4">
                 <a href="index.php">Home</a>
                 <a href="about.php">About Us</a>
                 <a href="#events">Events & Webinars</a>
                 <a href="#publications">Publications</a>
                 <a href="#members">Members</a>
-                <a href="#community">Community</a>
+                <a href="community.php">Community</a>
                 <a href="#contact">Contact Us</a>
             </nav>
 

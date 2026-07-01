@@ -73,17 +73,17 @@
           @apply block max-w-full;
         }
         section {
-          @apply py-20 overflow-clip;
+          @apply py-10 lg:py-20 overflow-clip;
         }
       }
 
       @layer components {
         .site-container {
-          @apply mx-auto w-[min(1400px,calc(100%_-_2rem))] space-y-16;
+          @apply w-full mx-auto max-w-[min(1400px,calc(100%_-_2rem))] md:px-4 space-y-8 lg:space-y-16;
         }
 
         .standard-typography {
-          @apply space-y-6;
+          @apply space-y-4 lg:space-y-6;
         }
 
         .standard-typography h1 b,
@@ -96,23 +96,23 @@
         }
 
         .standard-typography h1 {
-          @apply text-6xl font-semibold;
+          @apply text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold;
         }
 
         .standard-typography h2 {
-          @apply text-5xl font-semibold text-gray-200;
+          @apply text-2xl md:text-4xl xl:text-5xl font-semibold text-gray-200;
         }
 
         .standard-typography h3 {
-          @apply text-3xl font-semibold text-gray-200;
+          @apply text-xl md:text-2xl lg:text-3xl font-semibold text-gray-200;
         }
 
         .standard-typography h4 {
-          @apply text-4xl font-semibold text-gray-200;
+          @apply text-lg md:text-3xl lg:text-4xl font-semibold text-gray-200;
         }
 
         .standard-typography h5 {
-          @apply text-xl;
+          @apply lg:text-xl;
         }
 
         .ul-check li {
@@ -167,12 +167,12 @@
         }
 
         .site__home-hero article h1 {
-          @apply text-purple-100 text-[clamp(2rem,3.43vw,3rem)] font-light leading-[1.15];
+          @apply text-purple-100 text-[clamp(2rem,3.43vw,3rem)] font-light leading-[1.1];
         }
 
         .site__home-hero article h1 strong,
         .site__home-hero article h1 b {
-          @apply font-semibold text-[clamp(3.25rem,6.86vw,6rem)] block;
+          @apply font-semibold text-[clamp(2.5rem,6.86vw,6rem)] block;
         }
 
         .site__home-hero article h1 b {
@@ -180,7 +180,7 @@
         }
 
         .site__home-hero article h4 {
-          @apply text-purple-100 text-3xl;
+          @apply text-purple-100 text-[clamp(1.35rem,2.14vw,1.875rem)] leading-[1.35];
         }
 
         .site__inner-hero {
@@ -197,7 +197,7 @@
         }
 
         .stat-card {
-          @apply flex flex-col lg:flex-row items-center gap-4 rounded-lg bg-white p-6 shadow-[0_18px_50px_rgba(69,23,88,.12)] text-base;
+          @apply flex flex-col lg:flex-row lg:items-center gap-4 rounded-lg bg-white p-4 md:p-6 shadow-[0_18px_50px_rgba(69,23,88,.12)] lg:text-base;
         }
 
         .stat-card .icon {
@@ -209,15 +209,15 @@
         }
 
         .stat-card strong {
-          @apply block text-pink-100 font-medium text-4xl;
+          @apply block text-pink-100 font-medium text-xl md:text-4xl;
         }
 
         .mission-box {
-          @apply rounded-lg border border-white-100/28 bg-white-100/4 p-8 space-y-6;
+          @apply rounded-lg border border-white-100/28 bg-white-100/4 p-6 lg:p-8 space-y-6;
         }
 
         .mission-box h3 {
-          @apply text-3xl font-semibold;
+          @apply text-2xl lg:text-3xl font-semibold;
         }
 
         .event-card {
@@ -233,7 +233,7 @@
         }
 
         .event-date-badge {
-          @apply absolute top-0 right-4 text-white bg-pink-100 px-5 py-2 text-2xl text-center rounded-b-lg font-semibold;
+          @apply absolute top-0 right-4 text-white bg-pink-100 lg:px-5 px-3 py-2 text-lg lg:text-2xl text-center rounded-b-lg font-semibold;
         }
 
         .event-body {
@@ -245,11 +245,11 @@
         }
 
         .event-card .meta {
-          @apply flex gap-3.5 items-center justify-between border-0 border-b border-black/20 pb-2;
+          @apply flex flex-wrap gap-3 items-center justify-between border-0 border-b border-black/20 pb-2;
         }
 
         .event-card .meta > div {
-          @apply flex items-center gap-2;
+          @apply flex items-start gap-2;
         }
 
         .event-card .meta svg {
@@ -289,7 +289,7 @@
         }
 
         .site__about-intro .stat-card {
-          @apply absolute right-4 bg-pink-75 py-4;
+          @apply lg:absolute right-4 bg-pink-75 py-4;
         }
 
         .site__about-intro .stat-card:first-of-type {
@@ -301,7 +301,7 @@
         }
 
         .about-grid {
-          @apply grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-gray-80 -mx-8;
+          @apply grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-gray-80 -mx-8 -my-8 sm:-my-0;
         }
 
         .about-feature-grid {
@@ -313,15 +313,15 @@
         }
 
         .about-feature-card h5 {
-          @apply text-2xl font-semibold text-gray-200;
+          @apply text-lg md:text-xl lg:text-2xl font-semibold text-gray-200;
         }
 
         .about-feature-card figure {
-          @apply size-20;
+          @apply size-16 lg:size-20;
         }
 
         .speaker-photo {
-          @apply mx-auto size-[120px] bg-white rounded-full;
+          @apply lg:mx-auto size-[120px] bg-white rounded-full;
         }
 
         .winner-card {
@@ -357,7 +357,7 @@
         }
 
         .committee-card figure {
-          @apply size-40 bg-pink-50 rounded-full mx-auto;
+          @apply size-30 lg:size-40 bg-pink-50 rounded-full mx-auto;
         }
 
         .committee-card img {

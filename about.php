@@ -16,7 +16,7 @@
   <section class="site__about-intro">
     <div class="site-container">
       <div
-        class="grid lg:grid-cols-2 justify-between items-start gap-4 2xl:gap-10"
+        class="grid md:grid-cols-2 justify-between items-start gap-6 2xl:gap-10"
       >
         <div class="relative">
           <figure class="w-fit rounded-2xl overflow-clip">
@@ -27,31 +27,33 @@
             />
           </figure>
 
-          <div class="stat-card">
-            <div class="icon">
-              <img
-                src="assets/img/icons/solar_square-academic-cap-broken.svg"
-                alt=""
-                aria-hidden="true"
-              />
-            </div>
+          <div class="grid grid-cols-2 gap-4 mt-4">
+            <div class="stat-card">
+              <div class="icon">
+                <img
+                  src="assets/img/icons/solar_square-academic-cap-broken.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </div>
 
-            <div>
-              <strong data-count="100">100+</strong
-              ><span>Academic Publications</span>
+              <div>
+                <strong data-count="100">100+</strong
+                ><span>Academic Publications</span>
+              </div>
             </div>
-          </div>
-          <div class="stat-card">
-            <div class="icon">
-              <img
-                src="assets/img/icons/clarity_users-line.svg"
-                alt=""
-                aria-hidden="true"
-              />
-            </div>
+            <div class="stat-card">
+              <div class="icon">
+                <img
+                  src="assets/img/icons/clarity_users-line.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </div>
 
-            <div>
-              <strong data-count="500">500+</strong><span>Members</span>
+              <div>
+                <strong data-count="500">500+</strong><span>Members</span>
+              </div>
             </div>
           </div>
         </div>
@@ -96,13 +98,13 @@
   </section>
 
   <section
-    class="bg-purple-100 text-white relative isolate py-30 overflow-hidden"
+    class="bg-purple-100 text-white relative isolate lg:py-30 overflow-hidden"
   >
-    <figure class="absolute inset-0 mix-blend-multiply -z-1">
+    <figure class="absolute left-0 right-0 bottom-0 mix-blend-multiply -z-1">
       <img src="assets/img/bg-1.png" alt="" aria-hidden="true" />
     </figure>
     <div class="site-container">
-      <div class="grid md:grid-cols-2 gap-4 xl:gap-8">
+      <div class="grid md:grid-cols-2 gap-6 xl:gap-8">
         <article
           class="mission-box [&_ul]:list-disc [&_ul]:pl-4 [&_ul]:space-y-2"
         >
@@ -266,7 +268,7 @@
         <h4>Why Join Kolkata Menopause Society?</h4>
       </div>
       <div
-        class="grid lg:grid-cols-2 justify-between items-center gap-4 2xl:gap-10"
+        class="grid lg:grid-cols-2 justify-between items-center gap-6 2xl:gap-10"
       >
         <figure class="w-fit rounded-2xl overflow-clip">
           <img
@@ -277,7 +279,7 @@
         </figure>
 
         <article
-          class="[&_ul]:space-y-6 [&_ul]:lg:text-2xl [&_ul]:list-disc [&_ul]:pl-4 [&_ul]:space-y-2"
+          class="[&_ul]:space-y-2 [&_ul]:lg:space-y-4 [&_ul]:lg:text-2xl [&_ul]:list-disc [&_ul]:pl-4 [&_ul]:space-y-2"
         >
           <ul>
             <li>Exclusive educational resources</li>
@@ -401,7 +403,7 @@
 
     <div class="site-container">
       <div
-        class="standard-typography text-center [&_h2]:text-white [&_h3]:text-white [&_p]:lg:text-lg"
+        class="standard-typography lg:text-center [&_h2]:text-white [&_h3]:text-white [&_p]:lg:text-lg"
       >
         <h2>Building a Stronger Future for Women's Midlife Health</h2>
         <p>

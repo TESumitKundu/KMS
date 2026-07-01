@@ -13,11 +13,11 @@
     </div>
   </section>
 
-  <section class="text-center">
+  <section class="lg:text-center">
     <div class="site-container">
       <div class="standard-typography">
         <div
-          class="w-fit mx-auto bg-white rounded-lg px-4 py-4 border border-gray-150 flex gap-4 items-center"
+          class="w-fit mx-auto bg-white rounded-lg px-4 py-4 border border-gray-150 flex gap-4 flex-wrap items-center"
         >
           <figure class="speaker-photo">
             <img
@@ -26,7 +26,7 @@
               title="Dr. Arnab Kr Basak"
             />
           </figure>
-          <div class="space-y-3 text-start">
+          <div class="space-y-2 text-start">
             <h3>Dr. Arnab Kr Basak</h3>
             <p>President</p>
           </div>
