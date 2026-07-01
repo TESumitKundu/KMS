@@ -2,9 +2,9 @@
 <?php include 'includes/header.php';?>
 
 <main>
-  <section class="site__inner-hero bg-gradient-4 relative">
-    <figure class="absolute inset-0 m-auto flex items-center justify-center">
-        <img src="assets/img/bg-2.png" class="block mx-auto"/>
+  <section class="site__inner-hero">
+    <figure>
+      <img src="assets/img/bg-2.png" alt="" aria-hidden="true" />
     </figure>
     <div class="site-container">
       <div class="standard-typography text-center">

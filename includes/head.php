@@ -21,7 +21,9 @@
         --color-gray-50: #eee9f1;
         --color-gray-75: #e6e6e6;
         --color-gray-80: #d0d0d0;
+        --color-gray-90: #dadada;
         --color-gray-100: #4a4a4a;
+        --color-gray-150: #b4b4b4;
         --color-gray-200: #373737;
         --color-gray-300: #303030;
         --color-ink-100: #443649;
@@ -31,6 +33,7 @@
         /* Purple / Plum */
         --color-lilac-50: #f1dcfb;
         --color-purple-50: #f9eeff;
+        --color-purple-60: #f6eaff;
         --color-purple-75: #f5e6ff;
         --color-purple-100: #552677;
         --color-purple-900: #1d0430;
@@ -40,6 +43,7 @@
 
         /* Pink / Magenta */
         --color-pink-50: #f7d8ee;
+        --color-pink-60: #fbeafa;
         --color-pink-75: #fff8ff;
         --color-pink-100: #ac2b76;
         --color-pink-200: #ab2874;
@@ -57,7 +61,7 @@
           scroll-behavior: smooth;
         }
         body {
-          @apply m-0 overflow-x-hidden bg-white-100 text-gray-100 text-sm leading-[1.65] text-pretty;
+          @apply m-0 bg-white-100 text-gray-100 text-sm leading-[1.65] text-pretty;
         }
         a {
           @apply text-inherit no-underline;
@@ -69,7 +73,7 @@
           @apply block max-w-full;
         }
         section {
-          @apply py-20;
+          @apply py-20 overflow-clip;
         }
       }
 
@@ -94,7 +98,7 @@
         .standard-typography h1 {
           @apply text-6xl font-semibold;
         }
-        
+
         .standard-typography h2 {
           @apply text-5xl font-semibold text-gray-200;
         }
@@ -145,11 +149,22 @@
         .bg-gradient-3 {
           background: linear-gradient(104.04deg, #eed5ff 0%, #fbeafa 100%);
         }
-        
+
         .bg-gradient-4 {
-          background: linear-gradient(180deg, #FBEAFA 56.98%, #E9CAFF 100%);
+          background: linear-gradient(180deg, #fbeafa 56.98%, #e9caff 100%);
         }
 
+        .bg-gradient-5 {
+          background: linear-gradient(104.04deg, #eed5ff 0%, #fbeafa 100%);
+        }
+
+        footer h6 {
+          @apply text-lg font-semibold;
+        }
+
+        footer a:hover {
+          @apply text-pink-100;
+        }
 
         .site__home-hero article h1 {
           @apply text-purple-100 text-[clamp(2rem,3.43vw,3rem)] font-light leading-[1.15];
@@ -166,6 +181,19 @@
 
         .site__home-hero article h4 {
           @apply text-purple-100 text-3xl;
+        }
+
+        .site__inner-hero {
+          @apply relative isolate text-purple-100;
+          background: linear-gradient(180deg, #fbeafa 56.98%, #e9caff 100%);
+        }
+
+        .site__inner-hero figure {
+          @apply absolute inset-0 m-auto flex items-center justify-center -z-1;
+        }
+
+        .site__inner-hero figure img {
+          @apply block mx-auto;
         }
 
         .stat-card {
@@ -260,39 +288,6 @@
           @apply absolute top-[29px] right-[-5px] z-[2] hidden size-3 rounded-full bg-pink-100 lg:block;
         }
 
-        .about-page {
-          @apply overflow-hidden;
-        }
-
-        .about-hero {
-          @apply relative isolate overflow-hidden bg-purple-75 py-16 text-center;
-        }
-
-        .about-hero::before,
-        .about-hero::after,
-        .about-cta::before,
-        .about-cta::after {
-          content: "";
-          @apply absolute rounded-full border-[34px] border-white/20;
-        }
-
-        .about-hero::before {
-          @apply left-8 top-12 size-6;
-        }
-
-        .about-hero::after {
-          @apply right-16 bottom-10 size-12;
-        }
-
-        .about-hero h1 {
-          @apply text-[clamp(2rem,4vw,3.75rem)] font-semibold leading-tight text-purple-100;
-        }
-
-        .about-hero h1 strong,
-        .about-intro h2 strong {
-          @apply font-semibold text-pink-100;
-        }
-
         .site__about-intro .stat-card {
           @apply absolute right-4 bg-pink-75 py-4;
         }
@@ -305,11 +300,11 @@
           @apply bottom-8;
         }
 
-        .about-grid{
+        .about-grid {
           @apply grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-gray-80 -mx-8;
         }
 
-        .about-feature-grid{
+        .about-feature-grid {
           @apply grid gap-px md:grid-cols-2 lg:grid-cols-3;
         }
 
@@ -317,16 +312,16 @@
           @apply bg-white p-8 space-y-4;
         }
 
-        .about-feature-card h5{
+        .about-feature-card h5 {
           @apply text-2xl font-semibold text-gray-200;
         }
 
-        .about-feature-card figure{
-          @apply size-20
+        .about-feature-card figure {
+          @apply size-20;
         }
 
         .speaker-photo {
-          @apply mx-auto size-[154px] bg-white rounded-full;
+          @apply mx-auto size-[120px] bg-white rounded-full;
         }
 
         .winner-card {
@@ -345,12 +340,32 @@
           @apply size-10 rounded-full bg-white;
         }
 
-        footer h6 {
-          @apply text-lg font-semibold;
+        .committee-grid {
+          @apply grid gap-6 sm:grid-cols-2 lg:grid-cols-4;
         }
 
-        footer a:hover {
-          @apply text-pink-100;
+        .committee-group-card {
+          @apply rounded-2xl bg-white border border-gray-90 p-4 space-y-4;
+        }
+
+        .committee-group-card h5 {
+          @apply text-lg font-semibold text-gray-200;
+        }
+
+        .committee-card {
+          @apply text-center rounded-2xl bg-white overflow-clip p-8 space-y-4 backdrop-blur-[2px];
+        }
+
+        .committee-card figure {
+          @apply size-40 bg-pink-50 rounded-full mx-auto;
+        }
+
+        .committee-card img {
+          @apply h-full w-full object-cover;
+        }
+
+        .committee-card h6 {
+          @apply text-xl font-semibold text-gray-200;
         }
       }
     </style>
