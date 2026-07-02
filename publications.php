@@ -463,39 +463,46 @@
             <a href="#" class="cta">View All</a>
           </div>
           <div class="journal-grid">
-            <article class="journal-card">
+            <div class="journal-card">
               <figure>
                 <img
                   src="assets/img/sample-book.png"
                   alt="Menopause Review journal"
                 />
               </figure>
-              <h6>Menopause Review</h6>
-              <p>Volume 12 · Issue 1 · 2024</p>
-              <a class="cta" href="#">View Journal</a>
-            </article>
-            <article class="journal-card">
+              <article>
+                <h6>Menopause Review</h6>
+                <p>Volume 12 · Issue 1 · 2024</p>
+                <a class="cta" href="#">View Journal</a>
+              </article>
+            </div>
+
+            <div class="journal-card">
               <figure>
                 <img
                   src="assets/img/sample-book.png"
                   alt="Menopause Review journal"
                 />
               </figure>
-              <h6>KMS Journal</h6>
-              <p>Volume 8 · Issue 2 · 2024</p>
-              <a class="cta" href="#">View Journal</a>
-            </article>
-            <article class="journal-card">
+              <article>
+                <h6>KMS Journal</h6>
+                <p>Volume 8 · Issue 2 · 2024</p>
+                <a class="cta" href="#">View Journal</a>
+              </article>
+            </div>
+            <div class="journal-card">
               <figure>
                 <img
                   src="assets/img/sample-book.png"
                   alt="Menopause Review journal"
                 />
               </figure>
-              <h6>Women's Health Perspectives</h6>
-              <p>Volume 5 · Issue 1 · 2024</p>
-              <a class="cta" href="#">View Journal</a>
-            </article>
+              <article>
+                <h6>Women's Health Perspectives</h6>
+                <p>Volume 5 · Issue 1 · 2024</p>
+                <a class="cta" href="#">View Journal</a>
+              </article>
+            </div>
           </div>
         </article>
 
@@ -505,44 +512,60 @@
             <a href="#" class="cta">View All</a>
           </div>
           <div class="guideline-grid">
-            <article class="guideline-card">
-              <img src="assets/img/icons/care.png" alt="" aria-hidden="true" />
-              <h6>Menopause Management Guidelines 2024</h6>
-              <p>Evidence-based recommendations for clinical practice</p>
-              <a
-                class="cta border border-pink-200 text-pink-200 hover:bg-pink-200 hover:text-white"
-                href="#"
-                >Download</a
-              >
-            </article>
-            <article class="guideline-card">
-              <img
-                src="assets/img/icons/evidance.png"
-                alt=""
-                aria-hidden="true"
-              />
-              <h6>Cardiovascular Health Guidelines</h6>
-              <p>Management of cardiovascular risk in midlife women</p>
-              <a
-                class="cta border border-pink-200 text-pink-200 hover:bg-pink-200 hover:text-white"
-                href="#"
-                >Download</a
-              >
-            </article>
-            <article class="guideline-card">
-              <img
-                src="assets/img/icons/academic/img1.png"
-                alt=""
-                aria-hidden="true"
-              />
-              <h6>Bone Health & Osteoporosis Guidelines</h6>
-              <p>Prevention, diagnosis and treatment guidelines</p>
-              <a
-                class="cta border border-pink-200 text-pink-200 hover:bg-pink-200 hover:text-white"
-                href="#"
-                >Download</a
-              >
-            </article>
+            <div class="guideline-card">
+              <figure>
+                <img
+                  src="assets/img/icons/care.png"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </figure>
+              <article>
+                <h6>Menopause Management Guidelines 2024</h6>
+                <p>Evidence-based recommendations for clinical practice</p>
+                <a
+                  class="cta border border-pink-200 text-pink-200 hover:bg-pink-200 hover:text-white"
+                  href="#"
+                  >Download</a
+                >
+              </article>
+            </div>
+            <div class="guideline-card">
+              <figure>
+                <img
+                  src="assets/img/icons/evidance.png"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </figure>
+              <article>
+                <h6>Cardiovascular Health Guidelines</h6>
+                <p>Management of cardiovascular risk in midlife women</p>
+                <a
+                  class="cta border border-pink-200 text-pink-200 hover:bg-pink-200 hover:text-white"
+                  href="#"
+                  >Download</a
+                >
+              </article>
+            </div>
+            <div class="guideline-card">
+              <figure>
+                <img
+                  src="assets/img/icons/academic/img1.png"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </figure>
+              <article>
+                <h6>Bone Health & Osteoporosis Guidelines</h6>
+                <p>Prevention, diagnosis and treatment guidelines</p>
+                <a
+                  class="cta border border-pink-200 text-pink-200 hover:bg-pink-200 hover:text-white"
+                  href="#"
+                  >Download</a
+                >
+              </article>
+            </div>
           </div>
         </article>
       </div>

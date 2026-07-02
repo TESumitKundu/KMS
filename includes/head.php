@@ -77,10 +77,13 @@
           @apply pb-5 lg:pb-20 overflow-clip;
         }
 
+        .site__inner-hero,
         .site__home-hero,
         section[class*="bg-"],
-        section[class*="bg-"] + section:not([class*="bg-"]){
-          @apply pt-5 lg:pt-20 overflow-clip;
+        section[class*="bg-"] + section:not([class*="bg-"]),
+        .site__inner-hero + section:not([class*="bg-"]),
+        .site__inner-hero-2 + section:not([class*="bg-"]) {
+          @apply pt-5 lg:pt-20;
         }
       }
 
@@ -93,6 +96,7 @@
           @apply space-y-4 lg:space-y-6;
         }
 
+        .standard-typography p b,
         .standard-typography h1 b,
         .standard-typography h2 b,
         .standard-typography h3 b,
@@ -134,7 +138,7 @@
         }
 
         .ul-check li::before {
-          content: '';
+          content: "";
           display: inline-block;
           mask-image: url("assets/img/icons/simple-line-icons_check.svg");
           mask-size: 1.35em;
@@ -145,7 +149,6 @@
           background-color: currentColor;
           vertical-align: middle;
         }
-
 
         .cta {
           @apply px-4 py-2 inline-flex items-center justify-center gap-2 rounded-lg border font-medium text-sm transition duration-200 ease-in-out;
@@ -284,6 +287,10 @@
         .site__inner-hero-2 {
           @apply pt-0;
           background: linear-gradient(180deg, #fbeafa 56.98%, #ffffff 100%);
+        }
+
+        .site__inner-hero-2 .site-container {
+          @apply space-y-0;
         }
 
         .site__inner-hero-2 article {
@@ -472,11 +479,11 @@
         }
 
         .member-overview-grid {
-          @apply grid gap-8 lg:grid-cols-[0.9fr_1.1fr];
+          @apply grid gap-8 md:grid-cols-[0.9fr_1.1fr];
         }
 
         .member-panel {
-          @apply lg:rounded-2xl lg:bg-pink-75 lg:p-6 space-y-6;
+          @apply rounded-2xl bg-pink-75 p-4 md:p-6 space-y-6;
         }
 
         .member-panel h4 {
@@ -484,7 +491,7 @@
         }
 
         .member-type-grid {
-          @apply  grid gap-4 grid-cols-2 grid-cols-3 lg:grid-cols-4;
+          @apply grid gap-4 grid-cols-2 lg:grid-cols-3 xl:grid-cols-4;
         }
 
         .member-type-card {
@@ -521,7 +528,7 @@
         }
 
         .member-journey {
-          @apply rounded-2xl border border-pink-50 bg-white px-6;
+          @apply rounded-2xl border border-pink-50 bg-white p-4;
         }
 
         .member-journey-grid {
@@ -529,11 +536,11 @@
         }
 
         .member-journey-step {
-          @apply relative bg-white p-6 text-center;
+          @apply relative bg-white p-4 text-center;
         }
 
         .member-journey-step strong {
-          @apply absolute -top-4 left-1/2 grid size-9 -translate-x-1/2 place-items-center rounded-full bg-pink-100 text-sm font-semibold text-white;
+          @apply absolute -top-8 left-1/2 grid size-9 -translate-x-1/2 place-items-center rounded-full bg-pink-100 text-sm font-semibold text-white;
         }
 
         .member-journey-step .icon {
@@ -572,6 +579,111 @@
           @apply flex flex-wrap gap-4;
         }
 
+        .community-category-row {
+          @apply grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-10;
+        }
+
+        .community-category {
+          @apply rounded-xl bg-pink-75 p-4 text-center;
+        }
+
+        .community-category img {
+          @apply mx-auto mb-3 size-8 object-contain;
+        }
+
+        .community-category h6 {
+          @apply text-xs font-semibold text-purple-100;
+        }
+
+        .community-tags {
+          @apply flex flex-wrap gap-3;
+        }
+
+        .community-tags > * {
+          @apply rounded-md bg-white px-4 py-2  font-semibold text-purple-100 shadow-[0_14px_38px_rgba(84,32,111,.08)] hover:bg-purple-200 transition;
+        }
+
+        .community-network figure {
+          @apply mt-6 md:mt-0;
+        }
+
+        .community-engagement {
+          @apply grid gap-4 grid-cols-3 sm:grid-cols-4 lg:grid-cols-8;
+        }
+
+        .community-engagement-card {
+          @apply rounded-xl bg-pink-75 p-5 text-center;
+        }
+
+        .community-engagement-card img {
+          @apply mx-auto mb-3 size-9 object-contain;
+        }
+
+        .community-engagement-card h6 {
+          @apply text-sm font-semibold text-purple-100;
+        }
+
+        .community-member-grid {
+          @apply grid gap-6 sm:grid-cols-2 lg:grid-cols-4;
+        }
+
+        .community-member-card {
+          @apply rounded-xl border border-gray-90 bg-white p-5 text-center shadow-[0_12px_32px_rgba(84,32,111,.05)];
+        }
+
+        .community-member-card figure {
+          @apply mx-auto mb-4 size-20 overflow-hidden rounded-full bg-pink-75;
+        }
+
+        .community-member-card img {
+          @apply h-full w-full object-cover;
+        }
+
+        .community-member-card h6 {
+          @apply text-base font-semibold text-purple-100;
+        }
+
+        .community-member-card p {
+          @apply mt-1 text-xs font-medium text-purple-950;
+        }
+
+        .community-member-stats {
+          @apply mt-5 grid grid-cols-2 gap-px bg-gray-90;
+        }
+
+        .community-member-stats div {
+          @apply bg-white p-3;
+        }
+
+        .community-member-stats strong {
+          @apply block text-lg font-semibold text-purple-100;
+        }
+
+        .community-info-card {
+          @apply rounded-2xl bg-pink-75 p-6 space-y-6;
+        }
+
+        .community-info-card h4 {
+          @apply text-xl font-semibold text-purple-100;
+        }
+
+        .community-faq details div {
+          @apply text-xs pt-3;
+        }
+
+        .community-faq summary {
+          @apply flex items-center justify-between border-b border-pink-50 pb-3 font-medium cursor-pointer;
+        }
+
+        .community-faq summary svg {
+          @apply size-4 shrink-0 transition-transform duration-300 opacity-50;
+        }
+
+        .community-faq details[open] summary svg{
+          @apply rotate-180;
+        }
+
+
         .section-head {
           @apply flex items-center justify-between gap-4 mb-6;
         }
@@ -581,7 +693,7 @@
         }
 
         .section-head .cta {
-          @apply text-sm font-semibold text-pink-100;
+          @apply shrink-0 text-sm font-semibold text-pink-100;
         }
 
         .publication-card-grid {
@@ -589,7 +701,7 @@
         }
 
         .publication-card {
-          @apply overflow-hidden rounded-xl  bg-white shadow-[0_14px_38px_rgba(84,32,111,.08)];
+          @apply overflow-hidden rounded-xl bg-white shadow-[0_14px_38px_rgba(84,32,111,.08)];
         }
 
         .publication-card figure {
@@ -667,16 +779,25 @@
 
         .journal-grid,
         .guideline-grid {
-          @apply grid gap-4 grid-cols-2 sm:grid-cols-3;
+          @apply grid gap-4 grid-cols-2 md:grid-cols-3;
         }
 
         .guideline-card,
         .journal-card {
-          @apply flex flex-col gap-3;
+          @apply flex flex-wrap gap-4 rounded-xl p-4 lg:p-5 border border-pink-50;
+        }
+
+        .guideline-card article,
+        .journal-card article {
+          @apply flex-1 flex flex-col gap-3;
+        }
+
+        .journal-card {
+          @apply bg-pink-75;
         }
 
         .guideline-card {
-          @apply rounded-xl bg-white p-5 border border-pink-50 text-center shadow-[0_12px_32px_rgba(84,32,111,.05)];
+          @apply bg-white;
         }
 
         .journal-card figure {
@@ -690,12 +811,12 @@
 
         .journal-card h6,
         .guideline-card h6 {
-          @apply text-sm font-semibold text-purple-100;
+          @apply font-medium text-purple-100;
         }
 
         .journal-card p,
         .guideline-card p {
-          @apply mt-1 text-xs font-medium text-purple-950;
+          @apply text-xs;
         }
 
         .journal-card .cta,
@@ -704,7 +825,7 @@
         }
 
         .guideline-card img {
-          @apply mx-auto mb-5 size-16 object-contain;
+          @apply mx-auto  size-16 object-contain;
         }
 
         .publication-subscribe {
@@ -800,7 +921,7 @@
         }
 
         .speaker-photo {
-          @apply lg:mx-auto size-[120px] bg-white rounded-full;
+          @apply lg:!mx-auto size-[120px] bg-white rounded-full;
         }
 
         .winner-card {
@@ -836,7 +957,7 @@
         }
 
         .committee-card figure {
-          @apply size-30 lg:size-40 bg-pink-50 rounded-full mx-auto;
+          @apply size-30 lg:size-40 bg-pink-50 rounded-full !mx-auto;
         }
 
         .committee-card img {
