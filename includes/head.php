@@ -73,7 +73,13 @@
           @apply block max-w-full;
         }
         section {
-          @apply py-10 lg:py-20 overflow-clip;
+          @apply pb-5 lg:pb-20 overflow-clip;
+        }
+
+        .site__home-hero,
+        section[class*="bg-"],
+        section[class*="bg-"] + section:not([class*="bg-"]) {
+            @apply pt-5 lg:pt-20 overflow-clip;
         }
       }
 
@@ -115,7 +121,7 @@
           @apply lg:text-xl;
         }
 
-        .standard-typography p{
+        .standard-typography p {
           @apply text-balance text-base leading-[1.75];
         }
 
@@ -260,8 +266,22 @@
           @apply size-4 text-pink-100;
         }
 
+        .site__inner-hero-2 {
+          @apply pt-0;
+          background: linear-gradient(180deg, #fbeafa 56.98%, #ffffff 100%);
+        }
+
+        .site__inner-hero-2 article {
+          @apply relative isolate py-10 lg:py-20;
+        }
+
+        .site__inner-hero-2 article::before {
+          content: "";
+          @apply absolute inset-0 w-full aspect-square rounded-full blur-[20px] bg-white/50 mx-auto mb-0 -translate-y-1/3 z-[-1];
+        }
+
         .common-stats-grid {
-          @apply grid gap-px overflow-hidden rounded-2xl shadow-[0_22px_60px_rgba(84,32,111,.12)] sm:grid-cols-2 lg:grid-cols-6;
+          @apply grid gap-px overflow-hidden rounded-2xl shadow-[0_22px_60px_rgba(84,32,111,.12)] grid-cols-2 md:grid-cols-3 lg:lg:grid-cols-[auto] lg:grid-flow-col;
         }
 
         .stat-card-sm {
@@ -285,7 +305,7 @@
         }
 
         .events-tab {
-          @apply  text-pink-100;
+          @apply text-pink-100;
         }
 
         .events-tab.is-active {
@@ -342,6 +362,206 @@
 
         .webinar-card .cta {
           @apply w-full border-pink-100 text-pink-100 hover:bg-pink-100 hover:text-white;
+        }
+
+        .search-box {
+          @apply flex max-w-xl overflow-hidden rounded-lg border border-white bg-white shadow-[0_14px_34px_rgba(84,32,111,.08)];
+        }
+
+        .search-box input {
+          @apply min-h-14 flex-1 px-5 text-base text-purple-950 outline-none placeholder:text-gray-150;
+        }
+
+        .search-box button {
+          @apply grid min-h-14 w-16 place-items-center bg-pink-100 hover:bg-purple-100 text-2xl text-white transition;
+        }
+
+        .publication-categories {
+          @apply grid gap-4 lg:gap-6 grid-cols-2 lg:grid-cols-3 xl:grid-cols-6;
+        }
+
+        .publication-category {
+          @apply rounded-xl border border-pink-50 bg-pink-75 p-6 text-center;
+        }
+
+        .publication-category .icon {
+          @apply mx-auto mb-4 grid size-20 place-items-center rounded-full bg-white shadow-[0_12px_32px_rgba(84,32,111,.05)];
+        }
+
+        .publication-category .icon img {
+          @apply size-9 object-contain;
+        }
+
+        .publication-category h6 {
+          @apply text-base font-semibold text-purple-100;
+        }
+
+        .publication-category p {
+          @apply mt-1 font-medium text-purple-950;
+        }
+
+        .section-head {
+          @apply flex items-center justify-between gap-4 mb-6;
+        }
+
+        .section-head h3 {
+          @apply text-2xl font-semibold text-purple-100;
+        }
+
+        .section-head .cta {
+          @apply text-sm font-semibold text-pink-100;
+        }
+
+        .publication-card-grid {
+          @apply grid gap-6 sm:grid-cols-2 xl:grid-cols-4;
+        }
+
+        .publication-card {
+          @apply overflow-hidden rounded-xl  bg-white shadow-[0_14px_38px_rgba(84,32,111,.08)];
+        }
+
+        .publication-card figure {
+          @apply aspect-[1.62/1] overflow-hidden;
+        }
+
+        .publication-card figure img {
+          @apply h-full w-full object-cover;
+        }
+
+        .publication-card-body {
+          @apply space-y-3 p-5;
+        }
+
+        .publication-badge {
+          @apply inline-flex rounded bg-pink-75 px-3 py-1 text-xs font-semibold text-pink-100;
+        }
+
+        .publication-card h6 {
+          @apply text-base font-bold leading-snug text-purple-100;
+        }
+
+        .publication-card p {
+          @apply text-sm font-medium text-purple-950;
+        }
+
+        .publication-card-meta-grid {
+          @apply flex flex-wrap items-center justify-between gap-4;
+        }
+
+        .publication-card-meta {
+          @apply flex items-center gap-2  text-xs font-medium text-purple-950;
+        }
+
+        .publication-card-meta svg {
+          @apply size-4 opacity-50;
+        }
+
+        .publication-list {
+          @apply overflow-hidden rounded-xl border border-[#ececec] bg-white;
+        }
+
+        .publication-list-item {
+          @apply grid gap-4 border-b border-[#ececec] p-5 last:border-b-0 md:grid-cols-[1fr_0.25fr_auto] md:items-center;
+        }
+
+        .publication-list-title {
+          @apply flex gap-4;
+        }
+
+        .publication-list-title .icon {
+          @apply grid size-15 shrink-0 place-items-center rounded-lg bg-pink-75 text-pink-200
+        }
+
+        .publication-list-title .icon img {
+          @apply size-6 object-contain;
+        }
+
+        .publication-list-title h6 {
+          @apply text-base font-semibold text-purple-100;
+        }
+
+        .publication-list-title p,
+        .publication-list-item span {
+          @apply text-sm font-medium text-purple-950;
+        }
+
+
+        .publication-panels {
+          @apply grid gap-8 lg:grid-cols-2;
+        }
+
+        .publication-panel {
+          @apply lg:rounded-2xl lg:bg-pink-75 lg:p-6;
+        }
+
+        .journal-grid,
+        .guideline-grid {
+          @apply grid gap-4 grid-cols-2 sm:grid-cols-3;
+        }
+
+        .guideline-card,
+        .journal-card{
+           @apply flex flex-col gap-3;
+        }
+     
+        .guideline-card {
+          @apply rounded-xl bg-white p-5 border border-pink-50 text-center shadow-[0_12px_32px_rgba(84,32,111,.05)];
+        }
+
+        .journal-card figure {
+          @apply mb-2 aspect-[3/4] max-w-40;
+        }
+
+        .journal-card figure img,
+        .guideline-card img {
+          @apply h-full w-full object-cover;
+        }
+
+        .journal-card h6,
+        .guideline-card h6 {
+          @apply text-sm font-semibold text-purple-100;
+        }
+
+        .journal-card p,
+        .guideline-card p {
+          @apply mt-1 text-xs font-medium text-purple-950;
+        }
+
+        .journal-card .cta,
+        .guideline-card .cta {
+          @apply  w-full mt-auto border-purple-100 text-purple-100 hover:bg-purple-100 hover:text-white;
+        }
+
+        .guideline-card img {
+          @apply mx-auto mb-5 size-16 object-contain;
+        }
+
+        .publication-subscribe {
+          @apply rounded-2xl bg-gradient-to-r from-pink-100 to-purple-100 overflow-clip rounded-xl text-white flex gap-4 lg:items-center;
+        }
+
+        .publication-subscribe article{
+            @apply flex-1 p-6 flex justify-between items-center gap-6 flex-wrap
+        }
+
+        .publication-subscribe figure {
+          @apply hidden w-40 lg:block;
+        }
+
+        .publication-subscribe h5 {
+          @apply text-2xl font-semibold;
+        }
+
+        .publication-subscribe form {
+          @apply flex overflow-hidden rounded-lg bg-white flex-1 max-w-md;
+        }
+
+        .publication-subscribe input {
+          @apply min-h-14 flex-1 px-5 text-purple-950 outline-none;
+        }
+
+        .publication-subscribe button {
+          @apply bg-pink-100 px-8 font-semibold text-white;
         }
 
         .academic-resources {

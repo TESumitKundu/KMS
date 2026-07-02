@@ -2,15 +2,12 @@
 <?php include 'includes/header.php';?>
 
 <main class="events-page">
-  <section class="bg-hero-gradient">
+   <section class="site__inner-hero-2">
     <div class="site-container">
       <div
         class="grid md:grid-cols-2 justify-between items-end gap-6 2xl:gap-10"
-      >
-        <article class="standard-typography relative isolate">
-          <span
-            class="absolute inset-0 w-full aspect-square rounded-full blur-[20px] bg-white/50 mx-auto mb-0 -translate-y-1/3 -z-1"
-          ></span>
+      > 
+        <article class="standard-typography">
           <span class="inline-block text-pink-100"
             ><b>EVENTS & WEBINARS</b></span
           >
