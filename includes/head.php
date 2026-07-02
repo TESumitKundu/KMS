@@ -96,7 +96,7 @@
         }
 
         .standard-typography h1 {
-          @apply text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold;
+          @apply text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold text-balance text-purple-100;
         }
 
         .standard-typography h2 {
@@ -113,6 +113,10 @@
 
         .standard-typography h5 {
           @apply lg:text-xl;
+        }
+
+        .standard-typography p{
+          @apply text-balance text-base leading-[1.75];
         }
 
         .ul-check li {
@@ -189,7 +193,7 @@
         }
 
         .site__inner-hero figure {
-          @apply absolute inset-0 m-auto flex items-center justify-center -z-1;
+          @apply absolute inset-0 m-auto flex items-center justify-center z-[-1];
         }
 
         .site__inner-hero figure img {
@@ -241,7 +245,7 @@
         }
 
         .event-body h6 {
-          @apply text-black text-xl font-bold;
+          @apply text-black text-lg font-semibold;
         }
 
         .event-card .meta {
@@ -249,11 +253,95 @@
         }
 
         .event-card .meta > div {
-          @apply flex items-start gap-2;
+          @apply flex items-center gap-2;
         }
 
         .event-card .meta svg {
           @apply size-4 text-pink-100;
+        }
+
+        .common-stats-grid {
+          @apply grid gap-px overflow-hidden rounded-2xl shadow-[0_22px_60px_rgba(84,32,111,.12)] sm:grid-cols-2 lg:grid-cols-6;
+        }
+
+        .stat-card-sm {
+          @apply flex items-center gap-4 bg-white px-6 py-5;
+        }
+
+        .stat-card-sm img {
+          @apply size-9 object-contain;
+        }
+
+        .stat-card-sm strong {
+          @apply block text-2xl font-semibold leading-none text-pink-100;
+        }
+
+        .stat-card-sm span {
+          @apply block text-xs font-medium leading-tight text-purple-950;
+        }
+
+        .events-tabs {
+          @apply flex flex-wrap gap-6;
+        }
+
+        .events-tab {
+          @apply  text-pink-100;
+        }
+
+        .events-tab.is-active {
+          @apply bg-pink-100 text-white;
+        }
+
+        .events-card-grid {
+          @apply grid gap-8 sm:grid-cols-2 xl:grid-cols-4;
+        }
+
+        .webinar-card {
+          @apply overflow-hidden rounded-xl border border-slate-100 bg-white shadow-[0_14px_38px_rgba(84,32,111,.08)];
+        }
+
+        .webinar-card figure {
+          @apply relative aspect-[1.62/1] overflow-hidden;
+        }
+
+        .webinar-card figure img {
+          @apply h-full w-full object-cover;
+        }
+
+        .webinar-badge {
+          @apply absolute left-3 top-3 rounded-md bg-pink-100 px-3 py-1 text-xs font-semibold text-white;
+        }
+
+        .webinar-body {
+          @apply space-y-4 p-5;
+        }
+
+        .webinar-meta {
+          @apply flex flex-wrap items-center justify-between gap-3 text-xs font-semibold text-purple-950;
+        }
+
+        .webinar-meta span {
+          @apply inline-flex items-center gap-1.5;
+        }
+
+        .webinar-body h6 {
+          @apply text-base font-bold leading-snug text-purple-100;
+        }
+
+        .webinar-body p {
+          @apply font-medium text-purple-950;
+        }
+
+        .webinar-details {
+          @apply flex flex-wrap items-center justify-between gap-3 border-t border-gray-90 pt-3 text-xs font-semibold text-purple-950;
+        }
+
+        .webinar-details span {
+          @apply inline-flex items-center gap-1.5;
+        }
+
+        .webinar-card .cta {
+          @apply w-full border-pink-100 text-pink-100 hover:bg-pink-100 hover:text-white;
         }
 
         .academic-resources {

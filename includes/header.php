@@ -11,10 +11,11 @@
             <nav class="hidden md:flex gap-4">
                 <a href="index.php">Home</a>
                 <a href="about.php">About Us</a>
-                <a href="#events">Events & Webinars</a>
+                <a href="events.php">Events & Webinars</a>
                 <a href="#publications">Publications</a>
                 <a href="#members">Members</a>
                 <a href="community.php">Community</a>
+                <a href="committee.php">Committee</a>
                 <a href="#contact">Contact Us</a>
             </nav>
 
